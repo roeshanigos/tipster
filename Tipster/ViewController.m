@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
+@property (weak, nonatomic) IBOutlet UILabel *tipTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalTitleLabel;
+@property (weak, nonatomic) IBOutlet UIView *totalUpView;
 
 @end
 
@@ -21,6 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [UIView animateWithDuration:0.000002 animations:^{
+        self.totalUpView.alpha=0;
+    }];
 }
 
 
@@ -49,29 +55,50 @@
 }
 - (IBAction)onEditingBegin:(id)sender {
     [UIView animateWithDuration:0.2 animations:^{
-    self.mealBillField.frame = CGRectMake(self.mealBillField.frame.origin.x, self.mealBillField.frame.origin.y+30,
+    self.mealBillField.frame = CGRectMake(self.mealBillField.frame.origin.x, self.mealBillField.frame.origin.y,
         self.mealBillField.frame.size.width,
         self.mealBillField.frame.size.height);
-        self.tipLabel.alpha = 0;
+        
         
     }];
+  
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.totalUpView.alpha=1;
+        self.totalUpView.frame.origin.y-50;
+    }];
+
     
 
     
 }
 - (IBAction)onEditingEnd:(id)sender {
     CGRect newFrame = self.mealBillField.frame;
-    newFrame.origin.y -= 30;
     
-    [UIView animateWithDuration:0.2 animations:^{
+    
+    [UIView animateWithDuration:0.000002 animations:^{
         self.mealBillField.frame = newFrame;
+        
     }];
     
-    [UIView animateWithDuration:1 animations:^{
-        self.tipLabel.alpha= 1;
-    }];
+    
+    if (_mealBillField.text && _mealBillField.text.length > 0)
+    {
+        [UIView animateWithDuration:0.000002 animations:^{
+            self.totalUpView.alpha=1;
+        }];
+    }
+    else
+    {
+        [UIView animateWithDuration:0.000002 animations:^{
+            self.totalUpView.alpha=0;
+        }];
+    }
+
+    
     
 }
+
 
 
 

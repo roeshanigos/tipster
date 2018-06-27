@@ -15,6 +15,7 @@
 		359EC0F720E2D748006D5B6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 359EC0F620E2D748006D5B6C /* main.m */; };
 		359EC10120E2D748006D5B6C /* TipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359EC10020E2D748006D5B6C /* TipsterTests.m */; };
 		359EC10C20E2D748006D5B6C /* TipsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359EC10B20E2D748006D5B6C /* TipsterUITests.m */; };
+		359EC15920E31058006D5B6C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359EC15820E31058006D5B6C /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		359EC10720E2D748006D5B6C /* TipsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		359EC10B20E2D748006D5B6C /* TipsterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipsterUITests.m; sourceTree = "<group>"; };
 		359EC10D20E2D748006D5B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		359EC15720E31058006D5B6C /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		359EC15820E31058006D5B6C /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		359EC0DB20E2D746006D5B6C = {
 			isa = PBXGroup;
 			children = (
+				359EC15720E31058006D5B6C /* SettingsViewController.h */,
+				359EC15820E31058006D5B6C /* SettingsViewController.m */,
 				359EC0E620E2D746006D5B6C /* Tipster */,
 				359EC0FF20E2D748006D5B6C /* TipsterTests */,
 				359EC10A20E2D748006D5B6C /* TipsterUITests */,
@@ -265,6 +270,7 @@
 				359EC0EC20E2D746006D5B6C /* ViewController.m in Sources */,
 				359EC0F720E2D748006D5B6C /* main.m in Sources */,
 				359EC0E920E2D746006D5B6C /* AppDelegate.m in Sources */,
+				359EC15920E31058006D5B6C /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
